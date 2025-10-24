@@ -10,7 +10,7 @@ ENV OS_GIT_MAJOR=0
 ENV OS_GIT_MINOR=1
 ENV OS_GIT_PATCH=0
 
-COPY ./lokistack-gateway /opt/app-root/src/lokistack-gateway
+COPY . /opt/app-root/src/lokistack-gateway
 WORKDIR /opt/app-root/src/lokistack-gateway
 
 RUN go build -tags strictfipsruntime -a -ldflags '-s -w' -o lokistack-gateway .
